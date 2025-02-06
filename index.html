@@ -16,10 +16,17 @@
       <div class="content">
         <canvas id="universe"></canvas>
         <canvas id="canvas"></canvas>
-        <iframe src="audio/valentinStrykalo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
-        <audio autoplay loop>
-        	<source src="audio/valentinStrykalo.mp3" type="audio/mpeg">
+        <button id="playButton">Play Music</button>
+        <audio id="backgroundAudio" loop>
+          <source src="audio/valentinStrykalo.mp3" type="audio/mpeg">
         </audio>
+        
+        <script>
+          document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play();
+          });
+        </script>
         <div id="footer" class="">
           <svg id="scene" x="0%" y="0%" width="500%" height="100%">
               <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
