@@ -10,51 +10,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
-    <style>
-      /* Custom Styles */
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: #f0f0f0;
-          overflow: hidden;
-      }
-
-      #main-button {
-          background-color: #333;
-          color: white;
-          padding: 15px 30px;
-          font-size: 1.2rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.3s ease;
-      }
-
-      #main-button:hover {
-          background-color: #555;
-      }
-
-      #overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7);
-          opacity: 0;
-          pointer-events: none;
-          transition: opacity 0.5s ease;
-      }
-
-      .fade-in {
-          opacity: 1;
-          pointer-events: all;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -65,13 +20,9 @@
         <audio autoplay loop>
         	<source src="audio/valentinStrykalo.mp3" type="audio/mpeg">
         </audio>
-
-        <!-- Transition Button -->
-        <button id="main-button">Go to Main Page</button>
-        <div id="overlay"></div>
-
         <div id="footer" class="">
-          <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
+          <svg id="scene" x="0%" y="0%" width="500%" height="100%">
+              <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
             c3.7681-0.2334,19.4302,0.9424,28.3335,0.3506c17.1494-1.1396,30.9072-4.2734,38.333-4.6836
             c7.5972-0.4189,18.4058,0.3799,27.6665-0.9834c5.7075-0.8408,10.1318-4.042,14.9248-4.2705
             c7.8369-0.373,24.5693,3.6084,34.4087,4.2705c11.0586,0.7432,15.2656-1.8135,24.3335-2.1523c10.0576-0.376,20.4629,1.3867,28.6665,0
@@ -176,27 +127,13 @@
                       </g>
                   </g>
               </g>
-            </svg>
+          </svg>
         </div>
       </div>
     </div>
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/universe.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
-    <script>
-        document.getElementById("main-button").addEventListener("click", function() {
-            // Add overlay animation
-            const overlay = document.getElementById("overlay");
-            overlay.classList.add("fade-in");
-
-            // Transition to main page after animation
-            setTimeout(function() {
-                window.location.href = "https://yourmainpage.com"; // Update with your actual page URL
-            }, 500); // Adjust timing to match the overlay fade-in effect
-        });
-    </script>
   </body>
 </html>
